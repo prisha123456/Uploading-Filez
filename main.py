@@ -9,7 +9,7 @@ def upload():
 
 def allowed_file(filename):
     return '.' in filename and \
-        filename.rsplit('.', 1)[1].upper() in ALLOWED_EXTENSIONS
+        filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 @app.route('/uploader', methods=['GET','POST'])
 def uploader_file():
